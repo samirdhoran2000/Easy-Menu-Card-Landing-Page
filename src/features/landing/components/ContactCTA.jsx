@@ -33,7 +33,7 @@ I'm interested in getting a *free digital menu* for my hotel.
 
 Please set up a demo for me. Thank you!`;
 
-        const url = `https://wa.me/917378753636?text=${encodeURIComponent(msg)}`;
+        const url = `https://wa.me/918888634041?text=${encodeURIComponent(msg)}`;
 
         setTimeout(() => {
             setIsSubmitting(false);
