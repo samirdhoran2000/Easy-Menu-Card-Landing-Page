@@ -98,7 +98,7 @@ Please set up a demo for me. Thank you!`;
                         </ul>
 
                         {/* Trust bar */}
-                        <div className="pt-6 border-t border-slate-800 flex items-center gap-4">
+                        <div id="contact" className="pt-6 border-t border-slate-800 flex items-center gap-4">
                             <div className="flex -space-x-2.5">
                                 {['SD', 'RG', 'NG', 'RV'].map((n) => (
                                     <div key={n} className="w-9 h-9 rounded-full border-2 border-slate-900 bg-slate-800 flex items-center justify-center text-xs font-bold text-slate-300">{n}</div>
@@ -119,7 +119,7 @@ Please set up a demo for me. Thank you!`;
                         transition={{ duration: 0.8, delay: 0.15 }}
                         className="lg:col-span-3"
                     >
-                        <div id="contact" className="relative bg-gradient-to-b from-slate-800/80 to-slate-900/80 backdrop-blur-2xl border border-slate-700/50 rounded-[2.5rem] p-8 md:p-10 shadow-2xl shadow-black/40 overflow-hidden">
+                        <div className="relative bg-gradient-to-b from-slate-800/80 to-slate-900/80 backdrop-blur-2xl border border-slate-700/50 rounded-[2.5rem] p-8 md:p-10 shadow-2xl shadow-black/40 overflow-hidden">
                             {/* Top glow strip */}
                             <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-amber-400/40 to-transparent" />
                             {/* Corner decorations */}
