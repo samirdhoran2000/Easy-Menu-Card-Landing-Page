@@ -1,0 +1,6 @@
+# Easy Menu — https://easymenucard.com
+User-agent: *
+Allow: /
+Disallow:
+
+Sitemap: https://easymenucard.com/sitemap.xml
