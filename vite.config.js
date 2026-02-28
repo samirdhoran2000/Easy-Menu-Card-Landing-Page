@@ -10,5 +10,5 @@ export default defineConfig({
     open: true,
     host: true,
   },
-  // base: '/Easy-Menu-Card-Landing-Page/',
+  base: '/',
 })
