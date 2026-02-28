@@ -29,7 +29,7 @@ const Footer = () => (
                 {/* Brand col */}
                 <div className="col-span-2">
                     <div className="flex items-center gap-2.5 mb-5">
-                        <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-400 to-amber-500 flex items-center justify-center text-slate-900 font-black text-base">EM</div>
+                        <img src="/logo.svg" alt="Easy Menu Logo" className="w-9 h-9 rounded-xl object-cover shadow-md shadow-amber-500/20" />
                         <span className="text-lg font-bold text-white">Easy<span className="text-amber-400">Menu</span></span>
                     </div>
                     <p className="text-slate-500 text-sm leading-relaxed max-w-xs mb-6">

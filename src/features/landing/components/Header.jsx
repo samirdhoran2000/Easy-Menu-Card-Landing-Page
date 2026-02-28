@@ -23,9 +23,7 @@ const Header = () => {
             <div className="max-w-7xl mx-auto px-5 md:px-10 flex items-center justify-between">
                 {/* Logo */}
                 <a href="#" className="flex items-center gap-2.5 z-50 relative group">
-                    <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-400 via-amber-500 to-orange-500 flex items-center justify-center shadow-lg shadow-amber-500/30 font-black text-slate-900 text-base tracking-tight">
-                        EM
-                    </div>
+                    <img src="/logo.svg" alt="Easy Menu Logo" className="w-9 h-9 rounded-xl object-cover shadow-lg shadow-amber-500/30" />
                     <span className="text-lg font-bold tracking-tight text-white">Easy<span className="text-amber-400">Menu</span></span>
                 </a>
 
