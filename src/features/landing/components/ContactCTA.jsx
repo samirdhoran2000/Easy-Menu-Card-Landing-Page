@@ -190,7 +190,7 @@ Please set up a demo for me. Thank you!`;
                                     ) : (
                                         <>
                                             <span>💬</span>
-                                            Get Your Free Menu on WhatsApp
+                                            Submit on WhatsApp
                                             <ChevronRight className="w-5 h-5 shrink-0" />
                                         </>
                                     )}
