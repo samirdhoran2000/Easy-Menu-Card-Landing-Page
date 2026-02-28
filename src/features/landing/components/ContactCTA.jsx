@@ -47,6 +47,11 @@ Please set up a demo for me. Thank you!`;
             {/* Background decoration */}
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_50%,rgba(245,158,11,0.07),transparent)]" />
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent" />
+            {/* Accent orbs */}
+            <div className="absolute top-1/2 -translate-y-1/2 -left-24 w-[350px] h-[350px] bg-emerald-500/6 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute -bottom-16 -right-16 w-[320px] h-[320px] bg-amber-500/8 rounded-full blur-[90px] pointer-events-none" />
+            {/* Bottom fade line */}
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
 
             <div className="max-w-7xl mx-auto px-5 md:px-10 relative z-10">
 

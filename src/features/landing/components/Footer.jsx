@@ -18,8 +18,12 @@ const NAV = {
 };
 
 const Footer = () => (
-    <footer className="bg-slate-950 border-t border-slate-800/50">
-        <div className="max-w-7xl mx-auto px-5 md:px-10 pt-16 pb-8">
+    <footer className="bg-slate-950 border-t border-slate-800/50 relative overflow-hidden">
+        {/* Accent decorations */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-amber-500/25 to-transparent" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-amber-500/4 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-0 -right-20 w-[250px] h-[250px] bg-emerald-500/4 rounded-full blur-[80px] pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-5 md:px-10 pt-16 pb-8 relative z-10">
             <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mb-12">
 
                 {/* Brand col */}

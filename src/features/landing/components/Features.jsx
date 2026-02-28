@@ -48,6 +48,11 @@ const accentClass = {
 const Features = () => (
     <section id="features" className="py-28 bg-slate-950 border-t border-slate-800/50 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_100%,rgba(245,158,11,0.06),transparent)]" />
+        {/* Accent orbs */}
+        <div className="absolute -top-24 -right-24 w-[400px] h-[400px] bg-amber-500/7 rounded-full blur-[90px] pointer-events-none" />
+        <div className="absolute -bottom-20 -left-20 w-[320px] h-[320px] bg-emerald-500/6 rounded-full blur-[80px] pointer-events-none" />
+        {/* Faint diagonal grid */}
+        <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: 'repeating-linear-gradient(45deg, rgba(255,255,255,0.5) 0px, rgba(255,255,255,0.5) 1px, transparent 1px, transparent 40px)' }} />
 
         <div className="max-w-7xl mx-auto px-5 md:px-10 relative z-10">
             <div className="text-center max-w-2xl mx-auto mb-20">

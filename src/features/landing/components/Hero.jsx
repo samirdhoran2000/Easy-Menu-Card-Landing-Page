@@ -14,6 +14,11 @@ const Hero = () => {
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(245,158,11,0.12),transparent)]" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_80%_80%,rgba(16,185,129,0.07),transparent)]" />
             <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
+            {/* Accent orbs */}
+            <div className="absolute -top-20 -right-20 w-[420px] h-[420px] bg-amber-500/8 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute bottom-0 -left-16 w-[300px] h-[300px] bg-teal-500/6 rounded-full blur-[80px] pointer-events-none" />
+            {/* Bottom fade line */}
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
 
             <div className="max-w-7xl mx-auto px-5 md:px-10 w-full relative z-10">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">

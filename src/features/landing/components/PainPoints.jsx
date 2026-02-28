@@ -27,6 +27,11 @@ const PAINS = [
 const PainPoints = () => (
     <section id="why-digital" className="py-28 bg-slate-900 border-t border-slate-800/50 relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent" />
+        {/* Accent orbs */}
+        <div className="absolute -top-16 -right-16 w-[380px] h-[380px] bg-emerald-500/6 rounded-full blur-[90px] pointer-events-none" />
+        <div className="absolute -bottom-16 -left-16 w-[300px] h-[300px] bg-amber-500/7 rounded-full blur-[80px] pointer-events-none" />
+        {/* Bottom fade line */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent" />
 
         <div className="max-w-7xl mx-auto px-5 md:px-10 relative z-10">
             {/* Header */}
