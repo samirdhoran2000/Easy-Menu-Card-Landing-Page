@@ -1,76 +1,93 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { FileX, ArrowUpRight, Users, Palette, CheckCircle2 } from 'lucide-react';
+import { FileX, TrendingUp, Users, Palette, CheckCircle2 } from 'lucide-react';
 
-const painPoints = [
+const PAINS = [
     {
-        icon: <FileX className="w-6 h-6" />,
-        title: "Update Fast, Zero Reprint Costs",
-        description: "Need to increase a price or remove an out-of-stock item? Update your digital menu instantly without spending a dime on new prints every time."
+        icon: <FileX className="w-5 h-5" />,
+        problem: 'Reprint fees for every tiny change',
+        solution: 'Update any price or item in under 60 seconds — completely free, from your phone.',
     },
     {
-        icon: <ArrowUpRight className="w-6 h-6" />,
-        title: "Dynamic Sorting & Promotions",
-        description: "Highlight today's specials or reorder items based on the time of day. Promote your most popular dishes effortlessly without extra marketing costs."
+        icon: <TrendingUp className="w-5 h-5" />,
+        problem: 'Popular dishes buried at the bottom',
+        solution: 'Pin today\'s specials, promotions, or high-margin items to appear at the top — dynamically.',
     },
     {
-        icon: <Users className="w-6 h-6" />,
-        title: "No More Menu Scarcity",
-        description: "Only have 2-3 physical menus for a large group? Now, 10 or 20 guests can scan the QR code and view the menu simultaneously on their own devices."
+        icon: <Users className="w-5 h-5" />,
+        problem: 'Only 2-3 menus for a 10-person table',
+        solution: 'Every guest scans the QR and views the menu on their own device — simultaneously, instantly.',
     },
     {
-        icon: <Palette className="w-6 h-6" />,
-        title: "Instant Theme Swapping",
-        description: "Hosting a special event or holiday? Change your entire menu's look and feel instantly with built-in themes—no physical redesign needed."
-    }
+        icon: <Palette className="w-5 h-5" />,
+        problem: 'Reprinting to refresh the look for events',
+        solution: 'Switch themes for festive seasons, events, or rebranding in one click — no design cost.',
+    },
 ];
 
-const PainPoints = () => {
-    return (
-        <section id="why-digital" className="py-24 bg-slate-800 border-t border-slate-700 relative overflow-hidden">
-            <div className="container mx-auto px-6 md:px-12 relative z-10">
-                <div className="text-center max-w-3xl mx-auto mb-16">
-                    <motion.div
-                        initial={{ opacity: 0, y: -20 }}
+const PainPoints = () => (
+    <section id="why-digital" className="py-28 bg-slate-900 border-t border-slate-800/50 relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent" />
+
+        <div className="max-w-7xl mx-auto px-5 md:px-10 relative z-10">
+            {/* Header */}
+            <div className="grid lg:grid-cols-2 gap-16 items-end mb-16">
+                <div>
+                    <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-amber-400 font-bold text-sm uppercase tracking-widest mb-4">
+                        Solve Real Pain Points
+                    </motion.p>
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-bold mb-6"
+                        className="text-3xl md:text-5xl font-black text-white leading-tight"
                     >
-                        <CheckCircle2 className="w-4 h-4" /> Keep your existing paper menus too!
-                    </motion.div>
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-                        Solve everyday <span className="text-amber-500">menu problems</span>
-                    </h2>
-                    <p className="text-lg text-slate-400">
-                        We don't force you to discard your physical menus. Use Easy Menu alongside them to reduce friction, save money on minor changes, and give your guests a magical experience.
-                    </p>
+                        Problems every hotelier faces — <span className="text-amber-400">solved.</span>
+                    </motion.h2>
                 </div>
-
-                <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
-                    {painPoints.map((point, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-50px" }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="bg-slate-900/50 border border-slate-700 p-8 rounded-3xl hover:border-slate-600 transition-colors flex flex-col sm:flex-row gap-6 group"
-                        >
-                            <div className="w-14 h-14 shrink-0 bg-slate-800 text-amber-500 rounded-2xl flex items-center justify-center border border-slate-700 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-slate-900 transition-all">
-                                {point.icon}
-                            </div>
-                            <div>
-                                <h3 className="text-xl font-bold text-white mb-2">{point.title}</h3>
-                                <p className="text-slate-400 leading-relaxed text-sm md:text-base">
-                                    {point.description}
-                                </p>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
+                <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className="bg-emerald-500/10 border border-emerald-500/20 rounded-3xl p-6 flex items-start gap-4"
+                >
+                    <CheckCircle2 className="w-6 h-6 text-emerald-400 mt-0.5 shrink-0" />
+                    <div>
+                        <p className="text-white font-bold text-lg leading-tight">No need to throw away your paper menus.</p>
+                        <p className="text-slate-400 mt-1.5 text-sm leading-relaxed">Easy Menu is a digital companion — it sits alongside your existing setup while adding incredible value on top.</p>
+                    </div>
+                </motion.div>
             </div>
-        </section>
-    );
-};
+
+            {/* Pain cards */}
+            <div className="grid md:grid-cols-2 gap-5">
+                {PAINS.map((item, i) => (
+                    <motion.div
+                        key={i}
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: '-60px' }}
+                        transition={{ duration: 0.5, delay: i * 0.1 }}
+                        className="group bg-slate-950/60 border border-slate-800 rounded-3xl p-7 hover:border-slate-700 transition-all"
+                    >
+                        {/* Problem */}
+                        <div className="flex items-center gap-3 mb-5">
+                            <div className="w-10 h-10 rounded-xl bg-red-500/10 text-red-400 flex items-center justify-center shrink-0">
+                                {item.icon}
+                            </div>
+                            <p className="text-slate-500 text-sm line-through decoration-red-500/50">{item.problem}</p>
+                        </div>
+                        {/* Divider */}
+                        <div className="h-px bg-gradient-to-r from-amber-500/30 to-transparent mb-5" />
+                        {/* Solution */}
+                        <div className="flex items-start gap-3">
+                            <CheckCircle2 className="w-5 h-5 text-emerald-400 mt-0.5 shrink-0" />
+                            <p className="text-white font-semibold text-[15px] leading-relaxed">{item.solution}</p>
+                        </div>
+                    </motion.div>
+                ))}
+            </div>
+        </div>
+    </section>
+);
 
 export default PainPoints;
