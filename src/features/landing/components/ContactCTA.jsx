@@ -61,11 +61,11 @@ const ContactCTA = () => {
                             Ready to <span className="text-amber-500">Upgrade</span> Your Menu?
                         </h2>
                         <p className="text-lg md:text-xl text-slate-400 mb-8 max-w-lg leading-relaxed">
-                            We're giving exclusive early access trials to select hotels and restaurants. Drop your details and we'll set up a perfectly customized demo for your venue.
+                            Easy Menu is <strong>completely free</strong>. Drop your details matching the below format and we'll instantly set up your beautiful digital menu.
                         </p>
 
                         <ul className="space-y-5 mb-10">
-                            {['Free personalized setup', 'No credit card required for demo', 'Cancel anytime guaranteed'].map((item, i) => (
+                            {['100% Free', 'No credit card required', 'Keep your existing paper menus too'].map((item, i) => (
                                 <li key={i} className="flex items-center gap-3 text-slate-300">
                                     <CheckCircle2 className="w-5 h-5 text-emerald-500" />
                                     <span className="font-medium">{item}</span>
@@ -109,7 +109,7 @@ const ContactCTA = () => {
                                     onSubmit={handleSubmit}
                                     className="flex flex-col gap-5 relative z-10"
                                 >
-                                    <h3 className="text-2xl font-bold text-white mb-2">Request Early Access</h3>
+                                    <h3 className="text-2xl font-bold text-white mb-2">Get Your Free Menu</h3>
 
                                     <div className="grid grid-cols-1 gap-5">
                                         <div>
@@ -187,7 +187,7 @@ const ContactCTA = () => {
                                             <>Processing...</>
                                         ) : (
                                             <>
-                                                Request Custom Demo
+                                                Get Your Free Menu
                                                 <Send className="w-5 h-5" />
                                             </>
                                         )}

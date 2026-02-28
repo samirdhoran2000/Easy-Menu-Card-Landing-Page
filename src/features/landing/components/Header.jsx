@@ -38,10 +38,10 @@ const Header = () => {
                         </a>
                     ))}
                     <a href="#contact" className="px-5 py-2.5 rounded-full bg-slate-800 text-white text-sm font-medium hover:bg-slate-700 transition-colors border border-slate-700">
-                        Contact Sales
+                        Try It Free
                     </a>
                     <a href="#contact" className="px-5 py-2.5 rounded-full bg-amber-500 text-slate-900 text-sm font-bold hover:bg-amber-400 transition-colors shadow-[0_0_15px_rgba(245,158,11,0.3)] hover:shadow-[0_0_25px_rgba(245,158,11,0.5)] flex items-center gap-1">
-                        Get Demo
+                        Get Your Free Menu
                         <ChevronRight className="w-4 h-4" />
                     </a>
                 </nav>
@@ -80,14 +80,14 @@ const Header = () => {
                                     className="w-full py-3 rounded-xl bg-slate-700 text-white text-center font-medium border border-slate-600"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
-                                    Contact Sales
+                                    Try It Free
                                 </a>
                                 <a
                                     href="#contact"
                                     className="w-full py-3 rounded-xl bg-amber-500 text-slate-900 text-center font-bold"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
-                                    Get Your Free Demo
+                                    Get Your Free Menu
                                 </a>
                             </div>
                         </motion.div>
