@@ -43,7 +43,7 @@ Please set up a demo for me. Thank you!`;
     };
 
     return (
-        <section id="contact" className="py-28 relative overflow-hidden bg-slate-900 border-t border-slate-800/50">
+        <section className="py-28 relative overflow-hidden bg-slate-900 border-t border-slate-800/50">
             {/* Background decoration */}
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_50%,rgba(245,158,11,0.07),transparent)]" />
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent" />
@@ -119,7 +119,7 @@ Please set up a demo for me. Thank you!`;
                         transition={{ duration: 0.8, delay: 0.15 }}
                         className="lg:col-span-3"
                     >
-                        <div className="relative bg-gradient-to-b from-slate-800/80 to-slate-900/80 backdrop-blur-2xl border border-slate-700/50 rounded-[2.5rem] p-8 md:p-10 shadow-2xl shadow-black/40 overflow-hidden">
+                        <div id="contact" className="relative bg-gradient-to-b from-slate-800/80 to-slate-900/80 backdrop-blur-2xl border border-slate-700/50 rounded-[2.5rem] p-8 md:p-10 shadow-2xl shadow-black/40 overflow-hidden">
                             {/* Top glow strip */}
                             <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-amber-400/40 to-transparent" />
                             {/* Corner decorations */}
