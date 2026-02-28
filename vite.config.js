@@ -5,5 +5,10 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/Easy-Menu-Card-Landing-Page/',
+  server: {
+    port: 5173,
+    open: true,
+    host: true,
+  },
+  // base: '/Easy-Menu-Card-Landing-Page/',
 })

@@ -5,8 +5,8 @@ import { RefreshCcw, QrCode, Image as ImageIcon, LayoutDashboard, Utensils, Zap 
 const featureList = [
     {
         icon: <QrCode className="w-6 h-6" />,
-        title: 'Scan & Order Instantly',
-        description: 'Guests simply scan a QR code placed on their table to browse the menu. No app installation required.'
+        title: 'Scan & View Instantly',
+        description: 'Guests simply scan a QR code placed on their table to browse the menu on iOS or Android. No app installation required.'
     },
     {
         icon: <RefreshCcw className="w-6 h-6" />,
@@ -31,7 +31,7 @@ const featureList = [
     {
         icon: <Utensils className="w-6 h-6" />,
         title: 'Better Guest Experience',
-        description: 'Multi-language support and direct "Call Waiter" integrations mean happier customers and better reviews.'
+        description: 'Provide detailed dish descriptions, multi-language support, and allergen info to mean happier customers and better reviews.'
     }
 ];
 

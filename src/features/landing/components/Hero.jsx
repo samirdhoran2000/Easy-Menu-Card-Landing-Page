@@ -32,7 +32,7 @@ const Hero = () => {
                         </h1>
 
                         <p className="text-lg md:text-xl text-slate-400 max-w-xl leading-relaxed">
-                            Replace outdated paper menus with stunning digital cards. Let your guests order seamlessly via QR code—no app required. Save on printing costs, update instantly, and impress your customers.
+                            Replace outdated paper menus with stunning digital cards. Let your guests browse seamlessly via QR code on any iOS or Android device—no app required. Save on printing costs, update instantly, and impress your customers.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-4">
@@ -113,9 +113,6 @@ const Hero = () => {
                                                     <span className="text-[12px] font-bold text-amber-600">$34</span>
                                                 </div>
                                                 <p className="text-[10px] text-slate-500 leading-tight block">Grilled sirloin with...</p>
-                                                <div className="w-full flex justify-end mt-1">
-                                                    <span className="w-6 h-6 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 font-bold text-xs">+</span>
-                                                </div>
                                             </div>
                                         </div>
                                     ))}
@@ -127,10 +124,10 @@ const Hero = () => {
                                         <div className="w-5 h-5 opacity-80" /> <span className="text-[10px] font-bold">Menu</span>
                                     </div>
                                     <div className="flex flex-col items-center gap-1 text-slate-400">
-                                        <div className="w-5 h-5 opacity-80" /> <span className="text-[10px] font-medium">Cart</span>
+                                        <div className="w-5 h-5 opacity-80" /> <span className="text-[10px] font-medium">Offers</span>
                                     </div>
                                     <div className="flex flex-col items-center gap-1 text-slate-400">
-                                        <div className="w-5 h-5 opacity-80" /> <span className="text-[10px] font-medium">Call Waiter</span>
+                                        <div className="w-5 h-5 opacity-80" /> <span className="text-[10px] font-medium">About</span>
                                     </div>
                                 </div>
                             </div>
@@ -146,7 +143,7 @@ const Hero = () => {
                                 <QrCode className="w-5 h-5" />
                             </div>
                             <div>
-                                <p className="text-white font-bold text-sm">Scan to Order</p>
+                                <p className="text-white font-bold text-sm">Scan to View</p>
                                 <p className="text-slate-400 text-xs">No app needed</p>
                             </div>
                         </motion.div>

@@ -16,8 +16,8 @@ const steps = [
     },
     {
         number: "03",
-        title: "Order & Enjoy",
-        description: "Guests can flag a waiter digitally or complete their order directly from their phone, streamlining your front-of-house operations.",
+        title: "Explore & Decide",
+        description: "Guests can freely explore dietary tags, ingredients, and specials, making it easier for them to decide what to order from the waiter.",
         color: "from-blue-400 to-blue-600"
     }
 ];
