@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, QrCode, Smartphone, Star, ShieldCheck } from 'lucide-react';
+import { ArrowRight, ShieldCheck } from 'lucide-react';
+import PhoneMockup from './PhoneMockup';
 
 const STATS = [
     { value: "0₹", label: "Printing Costs" },
@@ -100,127 +101,7 @@ const Hero = () => {
                     </motion.div>
 
                     {/* Right: Phone Mockup */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.85 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 1.1, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-                        className="relative flex justify-center lg:justify-end"
-                    >
-                        {/* Glow behind phone */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-amber-500/10 to-transparent rounded-full blur-3xl scale-75" />
-
-                        {/* PHONE FRAME */}
-                        <div className="relative w-[300px] md:w-[340px] aspect-[9/19.5] bg-slate-900 rounded-[3.5rem] border-[7px] border-slate-700/80 shadow-[0_40px_100px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.05)] overflow-hidden">
-                            {/* Notch */}
-                            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-6 bg-slate-900 rounded-b-2xl z-20 flex items-end justify-center pb-1">
-                                <div className="w-12 h-1 bg-slate-700 rounded-full" />
-                            </div>
-
-                            {/* Screen content */}
-                            <div className="absolute inset-0 bg-white flex flex-col pt-7">
-                                {/* App Header */}
-                                <div className="px-4 pt-2 pb-3 bg-white border-b border-slate-100 flex items-center justify-between">
-                                    <div>
-                                        <p className="text-[10px] text-slate-400 font-medium uppercase tracking-wider">Welcome to</p>
-                                        <h5 className="font-black text-slate-900 text-base leading-tight">Grand Palace</h5>
-                                    </div>
-                                    <div className="w-9 h-9 bg-amber-500 rounded-xl flex items-center justify-center shadow-md">
-                                        <span className="text-white font-black text-xs">GP</span>
-                                    </div>
-                                </div>
-
-                                {/* Search bar */}
-                                <div className="mx-3 mt-3 mb-2 h-8 bg-slate-100 rounded-xl flex items-center px-3 gap-2">
-                                    <span className="text-slate-400 text-xs">🔍</span>
-                                    <span className="text-[11px] text-slate-400">Search dishes...</span>
-                                </div>
-
-                                {/* Category chips */}
-                                <div className="px-3 pb-2 flex gap-1.5 overflow-hidden">
-                                    {['⭐ Popular', '🥗 Starters', '🍝 Mains', '🍰 Desserts'].map((cat, i) => (
-                                        <span key={i} className={`px-3 py-1 text-[10px] font-bold rounded-full whitespace-nowrap ${i === 0 ? 'bg-amber-500 text-white' : 'bg-slate-100 text-slate-500'}`}>
-                                            {cat}
-                                        </span>
-                                    ))}
-                                </div>
-
-                                {/* Section label */}
-                                <div className="px-4 py-1.5">
-                                    <p className="text-[11px] font-black text-slate-800 uppercase tracking-wider">Today's Specials</p>
-                                </div>
-
-                                {/* Menu Items */}
-                                <div className="px-3 flex flex-col gap-2 flex-1 overflow-hidden">
-                                    {[
-                                        { name: 'Butter Chicken', price: '₹380', tag: '🔥 Bestseller', color: 'from-orange-200 to-amber-100' },
-                                        { name: 'Dal Makhani', price: '₹280', tag: '💚 Veg', color: 'from-green-100 to-emerald-50' },
-                                        { name: 'Paneer Tikka', price: '₹320', tag: '⭐ Chef\'s Pick', color: 'from-yellow-100 to-amber-50' },
-                                    ].map((item, i) => (
-                                        <div key={i} className="flex gap-3 bg-slate-50 p-2.5 rounded-2xl border border-slate-100 shadow-sm">
-                                            <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${item.color} shrink-0 flex items-center justify-center overflow-hidden`}>
-                                                <span className="text-2xl">{i === 0 ? '🍛' : i === 1 ? '🫘' : '🧆'}</span>
-                                            </div>
-                                            <div className="flex-1 min-w-0 flex flex-col justify-center">
-                                                <span className="text-[9px] font-bold text-amber-600 bg-amber-50 rounded-lg px-1.5 py-0.5 w-fit mb-1">{item.tag}</span>
-                                                <h6 className="text-[12px] font-bold text-slate-800 truncate">{item.name}</h6>
-                                                <p className="text-[11px] font-black text-amber-600 mt-0.5">{item.price}</p>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-
-                                {/* Bottom Nav */}
-                                <div className="mt-auto h-16 bg-white border-t border-slate-100 flex items-center justify-around px-4 shadow-[0_-8px_20px_rgba(0,0,0,0.05)]">
-                                    {[{ emoji: '📖', label: 'Menu', active: true }, { emoji: '✨', label: 'Offers' }, { emoji: 'ℹ️', label: 'About' }].map((item) => (
-                                        <div key={item.label} className={`flex flex-col items-center gap-1 ${item.active ? 'text-amber-500' : 'text-slate-400'}`}>
-                                            <span className="text-base">{item.emoji}</span>
-                                            <span className={`text-[9px] font-${item.active ? 'black' : 'medium'}`}>{item.label}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Floating badge 1 */}
-                        <motion.div
-                            animate={{ y: [0, -10, 0] }}
-                            transition={{ repeat: Infinity, duration: 3.5, ease: "easeInOut" }}
-                            className="absolute -left-4 md:-left-14 top-20 bg-slate-900/90 backdrop-blur-md p-3.5 rounded-2xl border border-slate-700/80 shadow-2xl flex items-center gap-3"
-                        >
-                            <div className="w-10 h-10 bg-emerald-500/20 text-emerald-400 rounded-xl flex items-center justify-center shrink-0">
-                                <QrCode className="w-5 h-5" />
-                            </div>
-                            <div>
-                                <p className="text-white font-bold text-sm leading-tight">QR Scan to View</p>
-                                <p className="text-slate-400 text-xs">iOS & Android</p>
-                            </div>
-                        </motion.div>
-
-                        {/* Floating badge 2 */}
-                        <motion.div
-                            animate={{ y: [0, 12, 0] }}
-                            transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut", delay: 1 }}
-                            className="absolute -right-2 md:-right-10 bottom-32 bg-slate-900/90 backdrop-blur-md p-3.5 rounded-2xl border border-slate-700/80 shadow-2xl flex items-center gap-3"
-                        >
-                            <div className="w-10 h-10 bg-amber-500/20 text-amber-400 rounded-xl flex items-center justify-center shrink-0">
-                                <Smartphone className="w-5 h-5" />
-                            </div>
-                            <div>
-                                <p className="text-white font-bold text-sm leading-tight">Update Instantly</p>
-                                <p className="text-slate-400 text-xs">No reprinting needed</p>
-                            </div>
-                        </motion.div>
-
-                        {/* Rating badge */}
-                        <motion.div
-                            animate={{ y: [0, -8, 0] }}
-                            transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 2 }}
-                            className="absolute -left-2 md:-left-8 bottom-24 bg-slate-900/90 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-slate-700/80 shadow-2xl flex items-center gap-2"
-                        >
-                            <div className="flex gap-0.5 text-amber-400 text-sm">{'★'.repeat(5)}</div>
-                            <p className="text-slate-300 text-xs font-semibold">4.9 Rating</p>
-                        </motion.div>
-                    </motion.div>
+                    <PhoneMockup />
                 </div>
             </div>
         </section>
