@@ -100,6 +100,40 @@ function App() {
             "description": "Free digital menu maker for hotels and restaurants. QR code menu card with instant updates."
           })
         }} />
+
+        {/* Structured Data: FAQPage for Google Rich Results */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is the digital menu really free?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes! Easy Menu is 100% free to set up and use. No credit card required, and guests can scan and browse freely without downloading any apps."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do guests access the menu?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Guests simply scan a QR code placed on their table using their smartphone camera. The menu instantly opens in their web browser."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I update the menu later?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Absolutely. You can update prices, add new dishes, or mark items out of stock in real-time. Changes reflect instantly on the digital menu."
+                }
+              }
+            ]
+          })
+        }} />
       </Helmet>
       <Header />
       <main>
