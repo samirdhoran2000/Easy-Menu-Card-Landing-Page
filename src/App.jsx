@@ -4,6 +4,7 @@ import ReactGA from 'react-ga4';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 
 // Initialize Google Analytics (Replace with exact GA4 Measurement ID)
 ReactGA.initialize('G-1C5NL57FN2');
@@ -162,6 +163,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
       </Routes>
     </div>
   );
