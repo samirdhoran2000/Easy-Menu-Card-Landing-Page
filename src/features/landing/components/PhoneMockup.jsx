@@ -234,7 +234,7 @@ const PhoneMockup = () => {
             <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ repeat: Infinity, duration: 3.5, ease: "easeInOut" }}
-                className="absolute -left-4 md:-left-14 top-20 bg-slate-900/90 backdrop-blur-md p-3.5 rounded-2xl border border-slate-700/80 shadow-2xl flex items-center gap-3"
+                className="absolute -left-4 md:-left-14 top-20 bg-slate-900/90 backdrop-blur-md p-3.5 rounded-2xl border border-slate-700/80 shadow-2xl flex items-center gap-3 z-10"
             >
                 <div className="w-10 h-10 bg-emerald-500/20 text-emerald-400 rounded-xl flex items-center justify-center shrink-0">
                     <QrCode className="w-5 h-5" />
