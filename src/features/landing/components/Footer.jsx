@@ -1,4 +1,5 @@
 import { Instagram, Linkedin, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const WHATSAPP_MSG = encodeURIComponent(
     'Hello Easy Menu! 👋 I want to know more about your free digital menu service.'
@@ -13,18 +14,18 @@ const WhatsAppIcon = ({ className }) => (
 
 const NAV = {
     Product: [
-        { name: 'Features', href: '#features' },
-        { name: 'Why Digital?', href: '#why-digital' },
-        { name: 'How it Works', href: '#how-it-works' },
+        { name: 'Features', href: '/#features' },
+        { name: 'Why Digital?', href: '/#why-digital' },
+        { name: 'How it Works', href: '/#how-it-works' },
     ],
     Company: [
-        { name: 'About Us', href: '#' },
-        { name: 'Contact', href: '#contact' },
-        { name: 'Careers', href: '#' },
+        { name: 'About Us', href: '/#' },
+        { name: 'Contact', href: '/#contact' },
+        { name: 'Careers', href: '/#' },
     ],
     Legal: [
-        { name: 'Privacy Policy', href: '#' },
-        { name: 'Terms of Service', href: '#' },
+        { name: 'Privacy Policy', href: '/privacy-policy' },
+        { name: 'Terms of Service', href: '/#' },
     ],
 };
 
@@ -45,10 +46,10 @@ const Footer = () => (
 
                 {/* Brand col */}
                 <div className="col-span-2">
-                    <div className="flex items-center gap-2.5 mb-5">
+                    <Link to="/" className="flex items-center gap-2.5 mb-5 max-w-max hover:opacity-80 transition-opacity">
                         <img src="/logo.svg" alt="Easy Menu Logo" className="w-9 h-9 rounded-xl object-cover shadow-md shadow-amber-500/20" />
                         <span className="text-lg font-bold text-white">Easy<span className="text-amber-400">Menu</span></span>
-                    </div>
+                    </Link>
                     <p className="text-slate-500 text-sm leading-relaxed max-w-xs mb-4">
                         Beautiful digital menus for hotels and restaurants. Free, instant, and perfectly complementary to your physical menus.
                     </p>
@@ -83,7 +84,11 @@ const Footer = () => (
                         <ul className="space-y-3">
                             {links.map((l) => (
                                 <li key={l.name}>
-                                    <a href={l.href} className="text-slate-500 hover:text-amber-400 transition-colors text-sm font-medium">{l.name}</a>
+                                    {l.href.startsWith('/#') || l.href === '/#' ? (
+                                        <a href={l.href} className="text-slate-500 hover:text-amber-400 transition-colors text-sm font-medium">{l.name}</a>
+                                    ) : (
+                                        <Link to={l.href} className="text-slate-500 hover:text-amber-400 transition-colors text-sm font-medium">{l.name}</Link>
+                                    )}
                                 </li>
                             ))}
                         </ul>

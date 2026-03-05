@@ -1,25 +1,47 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import ReactGA from 'react-ga4';
-import Header from './features/landing/components/Header';
-import Hero from './features/landing/components/Hero';
-import Features from './features/landing/components/Features';
-import PainPoints from './features/landing/components/PainPoints';
-import HowItWorks from './features/landing/components/HowItWorks';
-import FAQ from './features/landing/components/FAQ';
-import ContactCTA from './features/landing/components/ContactCTA';
-import Footer from './features/landing/components/Footer';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 // Initialize Google Analytics (Replace with exact GA4 Measurement ID)
 ReactGA.initialize('G-1C5NL57FN2');
 
-function App() {
+// Component to handle hash scrolling when route changes
+function ScrollToHash() {
+  const { pathname, hash } = useLocation();
+
   useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
-  }, []);
+    // Scroll to top on route change if no hash
+    if (!hash) {
+      window.scrollTo(0, 0);
+    }
+    // Scroll to hash
+    else {
+      setTimeout(() => {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 0);
+    }
+  }, [pathname, hash]);
+
+  return null;
+}
+
+function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname + location.hash });
+  }, [location]);
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-50 font-sans selection:bg-amber-500/20 selection:text-amber-300">
+      <ScrollToHash />
       <Helmet>
         <title>Easy Menu — Free Digital Menu for Hotels & Restaurants | QR Menu Card</title>
         <meta name="description" content="Easy Menu turns your hotel or restaurant menu into a stunning, QR-scannable digital experience. 100% free to set up — guests browse on any phone, no app needed. Update prices, specials & themes instantly." />
@@ -59,7 +81,7 @@ function App() {
               "@type": "ContactPoint",
               "contactType": "customer service",
               "url": "https://wa.me/918888634041",
-              "availableLanguage": ["English", "Hindi"]
+              "availableLanguage": ["English", "Hindi", "Marathi"]
             }
           })
         }} />
@@ -136,18 +158,14 @@ function App() {
           })
         }} />
       </Helmet>
-      <Header />
-      <main>
-        <Hero />
-        <Features />
-        <PainPoints />
-        <HowItWorks />
-        <FAQ />
-        <ContactCTA />
-      </main>
-      <Footer />
+
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      </Routes>
     </div>
   );
 }
 
 export default App;
+
