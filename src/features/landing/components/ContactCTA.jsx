@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Send, CheckCircle2, ChevronRight, Lock, Sparkles } from 'lucide-react';
 
@@ -14,6 +14,14 @@ const LABEL_CLASSES = 'block text-xs font-bold text-slate-400 uppercase tracking
 const ContactCTA = () => {
     const [formData, setFormData] = useState({ name: '', hotelName: '', email: '', phone: '' });
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isDesktop, setIsDesktop] = useState(true);
+
+    useEffect(() => {
+        const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
+        handleResize(); // Initialize on mount
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -43,7 +51,7 @@ Please set up a demo for me. Thank you!`;
     };
 
     return (
-        <section className="py-28 relative overflow-hidden bg-slate-900 border-t border-slate-800/50">
+        <section id={isDesktop ? "contact" : undefined} className="py-28 relative overflow-hidden bg-slate-900 border-t border-slate-800/50">
             {/* Background decoration */}
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_50%,rgba(245,158,11,0.07),transparent)]" />
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent" />
@@ -98,7 +106,7 @@ Please set up a demo for me. Thank you!`;
                         </ul>
 
                         {/* Trust bar */}
-                        <div id="contact" className="pt-6 border-t border-slate-800 flex items-center gap-4">
+                        <div id={!isDesktop ? "contact" : undefined} className="pt-6 border-t border-slate-800 flex items-center gap-4">
                             <div className="flex -space-x-2.5">
                                 {['SD', 'RG', 'NG', 'RV'].map((n) => (
                                     <div key={n} className="w-9 h-9 rounded-full border-2 border-slate-900 bg-slate-800 flex items-center justify-center text-xs font-bold text-slate-300">{n}</div>
